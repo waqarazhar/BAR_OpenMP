@@ -1,0 +1,41 @@
+This is the Readme for:
+Heat diffusion            
+
+[Name]: Gauss-Seidel Heat diffusion
+[Contact Person(OpenMP Implementation)]: Muhammad Waqar Azhar, waqarm@chalmers.se
+[Contact Person(Orignal OmpSS Implementation)]: Guillermo Miranda, guillermo.miranda@bsc.es
+[Access Level]: public
+[License Agreement]: GPL
+[Platform]: OpenMP
+
+[Body]
+ == Description ==
+Implementation of an iterative solver for heat distribution using Gauss-Seidel.
+
+The application generates a PPM image upon completion.
+
+It is mandatory to use regions support (NX_DEPS=regions).
+
+== General Algorithm ==
+The code was adapted to make use of regions, instead of relying on sentinels.
+
+== Execution instructions ==
+The user must provide a data file to the program. The data file will specify the number of iterations, which solver to use, the resolution of the image (square), number of heat sources and their position and temperature.
+
+Sample files are provided in the data folder. 
+
+== Performance Results ==
+Make sure the image size is big enough, or modify the block size, in order to generate tasks that are not too fine grained.
+
+
+== Input sets ==
+* test_antoniu.dat: 200 Iterations, Gauss-Seidel.
+* testgrind2.dat: 10 iterations of Gauss-Seidel (resolution: 4096).
+* testgrind2_regions.dat: 10 iterations of Gauss-Seidel (resolution: 198).
+
+== Traces ==
+
+== References ==
+* http://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method
+* http://en.wikipedia.org/wiki/Jacobi_method
+
