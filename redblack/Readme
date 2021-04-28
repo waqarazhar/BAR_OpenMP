@@ -1,0 +1,43 @@
+This is the Readme for:
+Heat diffusion            
+
+[Name]: Heat diffusion
+[Contact Person]: Guillermo Miranda, guillermo.miranda@bsc.es
+[Access Level]: public
+[License Agreement]: GPL
+[Platform]: OmpSs
+
+[Body]
+ == Description ==
+Implementation of an iterative solver for heat distribution. There are three user-selectable algorithms: Jacobi, Gauss-Seidel and Red-Black.
+
+The application generates a PPM image upon completion.
+
+It is mandatory to use regions support (NX_DEPS=regions).
+
+== General Algorithm ==
+The code was adapted to make use of regions, instead of relying on sentinels.
+
+== Execution instructions ==
+The user must provide a data file to the program. The data file will specify the number of iterations, which solver to use, the resolution of the image (square), number of heat sources and their position and temperature.
+
+Sample files are provided in the data folder. 
+
+== Performance Results ==
+Make sure the image size is big enough, or modify the block size, in order to generate tasks that are not too fine grained.
+
+
+== Input sets ==
+* test.dat: 2500 Iterations, Gauss-Seidel.
+* test_antoniu.dat: 200 Iterations, Gauss-Seidel.
+* testgrind.dat: 1 iteration of Jacobi.
+* testgrind2.dat: 10 iterations of Gauss-Seidel (resolution: 4096).
+* test_jacobi.dat: 200 Iterations, Jacobi.
+* test_redblack.dat: 200 Iterations, Red-Black.
+
+== Traces ==
+
+== References ==
+* http://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method
+* http://en.wikipedia.org/wiki/Jacobi_method
+
