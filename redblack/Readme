@@ -2,7 +2,8 @@ This is the Readme for:
 Heat diffusion            
 
 [Name]: Heat diffusion
-[Contact Person]: Guillermo Miranda, guillermo.miranda@bsc.es
+[Contact Person ( OpenMP Implementation )]: Muhammad Waqar Azhar, waqarm@chalmers.se
+[Contact Person( OmpSS Implementation ) ]: Guillermo Miranda, guillermo.miranda@bsc.es
 [Access Level]: public
 [License Agreement]: GPL
 [Platform]: OmpSs
