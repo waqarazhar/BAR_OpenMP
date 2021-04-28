@@ -1,0 +1,16 @@
+This is the Readme for:
+SparseLU Readme
+[Name]:Sparse LU Decomposition
+[Contact Person]: Omer Subasi, omer.subasi@bsc.es
+[Access Level]: public
+[License Agreement]: GPL
+[Platform]: OpenMP
+[Body]
+== Description ==
+This application performs a LU decomposition over a square sparse matrix. The matrix is allocated by blocks of contiguous memory. The specified size for the application is 3200x3200 which can be changed in the source code. The block size is 100x100.
+== Build instructions ==
+	Change the block size first  in source code
+	To build the application, call "make" in the terminal from the benchmark home directory.
+== Run instructions ==
+To run the application, run ./sparselu from the benchmark home directory.
+
